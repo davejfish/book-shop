@@ -17,7 +17,7 @@ describe('backend-express-template routes', () => {
     const response = await request(app).get('/authors/1');
     const bob = response.body;
     expect(bob).toHaveProperty('name', 'bob');
-    expect(bob).toHaveProperty('dob', '1900-05-05T08:00:00.000Z');
+    expect(bob).toHaveProperty('dob', '5/5/1900');
     expect(bob).toHaveProperty('pob', 'over there');
     expect(bob).toHaveProperty('books');
     expect(bob.books[0]).toHaveProperty('title');
