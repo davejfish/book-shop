@@ -29,6 +29,22 @@ describe('backend-express-template routes', () => {
     expect(excellentBook.authors[0]).toHaveProperty('pob', 'california');
   });
 
+  it('#POST should add a new book', async () => {
+    const response = await request(app)
+      .post('/books')
+      .send({
+        title: 'super book',
+        released: '2022',
+      });
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      id: expect.any(String),
+      title: expect.any(String),
+      released: expect.any(String),
+      authors: expect.any(Array),
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
