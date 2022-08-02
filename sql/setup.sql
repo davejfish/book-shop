@@ -29,7 +29,7 @@ CREATE TABLE books_to_authors (
 INSERT INTO authors (
     name, dob, pob
 ) VALUES
-('bob', '1900-05-05', 'over there'),
+('bob', '1900-05-05T08:00:00.000Z', 'over there'),
 ('shan', '1987-08-01', 'oregon'),
 ('bill', '1970-04-25', 'california'),
 ('ted', '1971-09-018', 'cali');
