@@ -13,12 +13,13 @@ describe('backend-express-template routes', () => {
     expect(response.body[0]).toEqual({
       id: expect.any(String),
       title: expect.any(String),
-      released: expect.any(Number),
+      released: expect.any(String),
     });
   });
 
   it('should return a book with author detail', async () => {
     const response = await request(app).get('/books/1');
+    console.log('response.body: ', response.body);
     const excellentBook = response.body.find(book => book.id = '1');
     expect(excellentBook).toHaveProperty('title', 'excellent book');
     expect(excellentBook).toHaveProperty('released', 1980);

@@ -8,9 +8,9 @@ describe('backend-express-template routes', () => {
     return setup(pool);
   });
   
-  it('example test - delete me!', () => {
-    expect(1).toEqual(1);
-  });
+  // it('example test - delete me!', () => {
+  //   expect(1).toEqual(1);
+  // });
 
   afterAll(() => {
     pool.end();
