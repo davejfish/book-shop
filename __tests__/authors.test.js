@@ -10,17 +10,12 @@ describe('backend-express-template routes', () => {
 
   it('should return a list of authors', async () => {
     const response = await request(app).get('/authors');
-    expect(response.body[0]).toEqual({
-      id: expect.any(String),
-      name: expect.any(String),
-      dob: expect.any(Date),
-      pob: expect.any(String),
-    });
+    expect(response.body.length).toEqual(4);
   });
 
   it('should return an author with a detail of books written', async () => {
     const response = await request(app).get('/authors/1');
-    const bob = response.body.find(author => author.id = '1');
+    const bob = response.body.find(author => author.id === '1');
     expect(bob).toHaveProperty('name', 'bob');
     expect(bob).toHaveProperty('dob', '1900-05-05');
     expect(bob).toHaveProperty('pob', 'over there');
