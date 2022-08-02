@@ -38,6 +38,7 @@ describe('backend-express-template routes', () => {
       name: expect.any(String),
       dob: expect.any(String),
       pob: expect.any(String),
+      books: expect.any(Array),
     });
   });
 
