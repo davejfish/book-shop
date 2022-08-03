@@ -24,7 +24,7 @@ describe('backend-express-template routes', () => {
     expect(excellentBook).toHaveProperty('released', '1980');
     expect(excellentBook).toHaveProperty('authors');
     expect(excellentBook.authors[0]).toHaveProperty('name', 'bill');
-    expect(excellentBook.authors[0]).toHaveProperty('dob', '4/24/1970');
+    expect(excellentBook.authors[0]).toHaveProperty('dob', '4/25/1970');
     expect(excellentBook.authors[0]).toHaveProperty('pob', 'california');
   });
 
