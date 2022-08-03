@@ -11,7 +11,6 @@ describe('backend-express-template routes', () => {
   it('should return a list of books', async () => {
     const response = await request(app).get('/books');
     expect(response.body[0]).toEqual({
-      authors: expect.any(Array),
       id: expect.any(String),
       title: expect.any(String),
       released: expect.any(String),
@@ -25,7 +24,7 @@ describe('backend-express-template routes', () => {
     expect(excellentBook).toHaveProperty('released', '1980');
     expect(excellentBook).toHaveProperty('authors');
     expect(excellentBook.authors[0]).toHaveProperty('name', 'bill');
-    expect(excellentBook.authors[0]).toHaveProperty('dob', '1970-04-25');
+    expect(excellentBook.authors[0]).toHaveProperty('dob', '4/24/1970');
     expect(excellentBook.authors[0]).toHaveProperty('pob', 'california');
   });
 
@@ -41,7 +40,6 @@ describe('backend-express-template routes', () => {
       id: expect.any(String),
       title: expect.any(String),
       released: expect.any(String),
-      authors: expect.any(Array),
     });
   });
 
