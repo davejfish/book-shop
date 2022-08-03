@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <main>
+    <h2>dvd shop api</h2>
+
+    <section>
+      <table>
+      <tr>
+        <th>route</th>
+        <th>method</th>
+        <th>description</th>
+        <th>example</th>
+      </tr>
+      <tr>
+        <td>/authors</td>
+        <td>GET</td>
+        <td>gets a list of authors</td>
+        <td><a href="/authors">authors</a></td>
+      </tr>
+      <tr>
+        <td>/authors/:id</td>
+        <td>GET</td>
+        <td>gets an author with authored books</td>
+        <td><a href="/authors/1">authors:id</a></td>
+      </tr>
+      <tr>
+        <td>/authors</td>
+        <td>POST</td>
+        <td>adds an author to the authors table</td>
+        <td><span>{
+        name: 'author man',
+        dob: '1850-01-01',
+        pob: 'india'
+      }</span></td>
+      </tr>
+      <tr>
+        <td>/books</td>
+        <td>GET</td>
+        <td>gets all books</td>
+        <td><a href="/books">books</a></td>
+      </tr>
+      <tr>
+        <td>/books/:id</td>
+        <td>GET</td>
+        <td>gets a book with all authors</td>
+        <td><a href="/books/1">books:id</a></td>
+      </tr>
+      <tr>
+        <td>/books</td>
+        <td>POST</td>
+        <td>adds a book to the books table</td>
+        <td><span>{
+        title: 'super book',
+        released: '2022',
+      }</span></td>
+      </tr>
+  </main>
+
+</body>
+
+
+</html>
